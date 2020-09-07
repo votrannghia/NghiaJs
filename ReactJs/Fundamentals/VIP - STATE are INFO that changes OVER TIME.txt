@@ -1,0 +1,16 @@
+
+
+
+        STATE are DATA that CHANGES over time!
+
+        STATE = { MAIN STATE }    U   {  HELPER STATE }
+
+        1. MAIN state: 
+                        Persistence Data is stored at database
+
+        2. HELPER state: 
+                        Meaningful at RUN-TIME, used to:
+                        + Support for computing (often locally state)
+                        + interact between the HIGH and LOW (Consumer and Prodivder)
+
+

@@ -1,0 +1,9 @@
+
+Put the pure object(not array, list, or collection) into a child.
+Error: Objects are not valid as a React child (found: object with keys {_id, name}). If you meant to render a collection of children, use an array instead.
+
+
+
+
+When render collection
+Warning: Each child in a list should have a unique "key" prop.

@@ -1,0 +1,56 @@
+
+
+
+	CONTEXT of EXTRACTING piece of code into a FUNCTION
+
+
+
+	0. The MAIN function vs The HELPER function
+		=> The MAIN tell a abstraction story (by using the HELPER ones)
+		=> The HELPER does the implementation detailedly (Encapsulation at 1 place)
+		=> The MAIN should not known about detailed stuffs of the HELPER, 
+					just use the interface of the HELPER.
+
+
+	1. These piece of code is REPEATED over and over across many places.
+
+	2. Should EXTRACT it, into a 1 place, called FUNCTION (or class, or module).
+
+	3. Flows:
+		1. Identify the MAIN RESPONSIBILITY of the function
+			=> give it a meaningful name relevant to this responsibility.
+				function doSingleResponsibility = (mainInput1, mI2, mI3) => {
+					// a litte setup/initiallizing here
+
+					// STEPS to do Main Responsibility with the main Inputs;
+
+					// OUTPUT: a pointer of another function || an action || a value of data || an object...
+								// Ex: action: [redirect to the home page...]
+				}
+
+		2. Ensure that all the steps in the function must have the SAME level of abstraction.
+
+		3. Ensure the conditional statements are written better
+
+		4. Switch statement:
+			=> What if Business add more cases -> We must change the block Switch{} -> Bad
+				=> Think of using Factory Patterns.
+
+		5. Ensure the input validations, try-catch, errors handling, logging are CLEAN.
+
+		6. Decrease the DEPENDENCY on other modules (in case they have changes over time).
+			=> Use their INTERFACE, not Detailed Implementation. Ex: Factory Patterns
+
+		7. CONSTANTs used repeatedly should be defined at 1 place.
+			+ Config file
+			+ Top on a module(file)
+
+		* (Optional) Think of the ADDITIONAL steps
+			function f (additionalParam1, m1, m2, m3, additionalParam2) => {
+				doBefore(a1); -------------------> ADDITIONAL step
+				doMainResponsibility(m1,m2, m3);
+				doAfter(a2);  -------------------> ADDITIONAL step
+			}
+				=> We could create a bunch of OVERLOAD functions based on the core function: should be RESTRICTED
+	
+	

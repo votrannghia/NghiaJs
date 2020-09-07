@@ -1,0 +1,35 @@
+                                        INTERACTING BETWEEN CONTAINER COMPONENT - PRESENTATIONAL COMPONENT
+
+
+                                        1. HIGH COMPONENT - CONTAINER COMPONENT - HOST state COMPONENT
+                                            + Give information to LOW components(Presentational Components)
+                                            + Delegate Describing What the UI look like to LOW component (Presentational Components)
+                                            + Responsibility:
+                                                Hold the STATE shared across components to keep it sync
+                                                Handling EVENTs raised from the LOW components.
+
+
+                                        2. LOW component - PRESENTATIONAL component
+                                            + Receive information from HIGH components
+                                            + Delegate handling EVENTs to the HIGH components
+                                            + Responsibility:
+                                                Use information(PROPS) from the HIGH components + internal STATE(optional) => Describing What the UI look like
+                                                Return the React Element
+
+
+                                        3. HIGH component do not know how to render at LOW
+                                        => The HIGH do DELEGATING STATE to the LOW
+                                            => The LOW do its describing the UI
+
+                                            "The HIGH transfer data to the LOW;
+                                            The LOW use received data to DESCRIBING the UI."
+                                            All via props.
+
+                                        4. The LOW do not HOST state
+                                            => It does not know how to handle EVENTs from user
+                                            => The LOW delegate the handling EVENTs to the HIGH
+                                            The HIGH host state, so it know how to handle EVENTs from user.
+                                            
+                                            "The HIGH host STATE, know how to handle EVENTs
+                                            The LOW delegate handling EVENTs to the HIGH."
+                                            How: The HIGH give the LOW the ADDRESS of the handler via props

@@ -1,0 +1,15 @@
+
+            1. The information that could be used in many place (many component)
+                => a HELPER state, REMEMBER the CURRENT status of individual user (Keep track of the current status of individual user)
+                                + shared across the LOW components
+                                + hosted by the HIGH
+                                + support for rendering components
+                                + I mysefl create it.
+                Note: The current UI depend on the CURRENT status of individual user.
+                      // Cause the CURRENT status is changed over run-time by user's behaviors
+
+
+            2. The data from database
+                => MAIN state (persitence data)
+
+            3. 

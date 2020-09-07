@@ -1,0 +1,32 @@
+
+
+	Story:
+		At HIGH
+			<div class="container">
+				<LOW
+					input1={value1}
+					input2={value2}
+					input3={value3} />
+			</div>
+			
+			=> We call "function" named "LOW" with 3 parameter:
+				input1, input2, input3.
+			
+			=> Inside the "function" LOW, we have usage of 3 these above inputs
+
+
+	Reverse: DESIGNING a REUSABLE COMPONENT:
+		0. Identify the OUTPUT(returned result) of the "Function"
+		1. Define name of "Function"
+		2. Identify essential inputs for computing inside the "function"
+	
+		=> Who(COMPONENT) wana use this reusabel Component("Function"),
+			must provide 3 above inputs.
+		=> Receiving inputs is perform via the PROPS
+
+		At LOW:
+			To access the above inputs, we use:
+				this.props.input1
+				this.props.input2
+				this.props.input3
+		

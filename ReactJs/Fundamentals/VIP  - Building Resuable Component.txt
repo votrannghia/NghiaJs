@@ -1,0 +1,10 @@
+Light components
+Paginantion components
+Table components
+Form components
+
+
+
+REPRESENTATIONAL COMPONENT : ONLY receive PROPS and do DESCRIBING WHAT UI LOOK LIKE
+
+CONTAINER COMPONENT (HOST COMPONENT || HIGH COMPONENT) =====> hold STATE shared across Components.

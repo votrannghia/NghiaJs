@@ -1,0 +1,32 @@
+
+
+
+
+
+                            1. Props are also used to allow child components to access methods defined in the parent
+                            component (handlers for EVENTs raised from the LOW).
+
+                            2. This is a good way to centralize managing the state in the parent component, and
+                            avoid children to have the need to have their own state
+
+                            3. Most of your components will just display some kind of information based on the props they
+                            received, and stay stateless. (REPRESENTATIONAL component)
+
+
+
+                            Props as a pointers point to a bundle of {data and handlers}
+
+
+                            PARENT------------------->HIGH(props) ->>>>>>>>>>>>>>>>>>>>>>>> LOW (props) ->>>>>>>>>>>>>>>>>> LOWER(props) ---> LOWER2
+
+                            Init
+                                PARENT give INPUTS = { 
+                                    1. PURE DATA: v1={data1} v2={data2};;;;
+                                    2. React CHILDREN element: .....;;;;
+                                    3. Handlers's ADDRESSES: for handling EVENTs raised from the LOWER component (LOW, LOWER, LOWER2)
+                                }
+
+
+
+
+

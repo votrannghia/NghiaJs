@@ -1,0 +1,66 @@
+
+
+
+1. Regular function
+	index.js 
+	#
+		function doSomething(){
+			log(this);
+		}
+		
+		doSomething(); // stand-alone
+	#
+=> The function doSomething Does NOT belong to any objects.
+=> this === undefined
+
+2. Method
+	Is a function declared inside an Object
+	index.js 
+	#
+		const person = {
+			doSomething() {
+				log(this);
+			}
+		}
+	#
+=> this === the current object (here is object {} which person point to)
+
+3. Callback function
+	A Function(f) is passed into another Function(F2) as a parameter.
+	Then this callback f is invoked inside the function F2;
+	index.js 
+	#
+		const person = {
+			doSomething() {
+				setTimeout(
+					function() { log('this is a callback function', this) },
+					1000
+				);
+			}
+		}
+	#
+	
+=>	Here the callback is: # function() { log('this is a callback function', this) } #
+=>  this === window. WHY?
+		BECAUSE the PURE callback is not belong to any object, except window.
+
+4. Arrow function
+	() => {}
+	DONT re-bind this
+	Ex: If we want the this at case 3, reference to person object instead of window. We do as follow:
+	We make the callback function under the form of a ARROW function
+	const person = {
+		doSomething() {
+			setTimeout(
+				() => { log('this is a callback function', this) },
+				1000
+			);
+		}
+	}
+	
+	
+II. HOW TO CHANGE this
+	1. Self approach: Keep the object which we want to call the function on it
+	2. Bind(), Apply(), Call()
+		f = f.bind(object);
+	3. Using Arrow function (ECMA 6)

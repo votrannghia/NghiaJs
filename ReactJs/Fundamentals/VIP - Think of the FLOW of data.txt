@@ -1,0 +1,6 @@
+        THINK OF THE FLOW OF DATA
+
+1. Think of the FLOW of data
+2. Consider WHERE I can make an impaction on to change something
+    + Change data
+    + By a function

@@ -1,0 +1,29 @@
+
+	ReactDOM.render(
+		BrowserRouter
+			THE-APP				-> is injected { history, location, match}
+		BrowserRouter
+		
+		,
+		
+		RootDOMElement
+	)
+	
+
+
+	THE-APP = {NAVIGATIONs, Feature1, Feature2, Feature3, ...}
+		+ NAVIGATIONs
+			path1 with Instructionlabel1
+			path2 with Instructionlabel2
+			...
+		+ Container
+			Route1	path1 -----> Feature1 				// component={Feature1}
+			Route2  path2 -----> Feature2				// render={(props) => <Feature2 {...props} prX={value}, ... />}
+			Route3  path3 -----> Feature3
+			...
+			Redirect from "pathX" to "PathToMAINFeature"
+			Redirect to "/NOT-FOUND"
+	
+	
+	Note: Should have an OUTLOOK: each Feature is a sub-app
+		+ Have its own navigations, routes

@@ -1,0 +1,7 @@
+
+
+    BEHIND the scence of EVENT handlers is:
+
+        + PREPARING states for the RENDERING
+        + DEFINING CONDITIONs for the RENDERING
+        + UPDATING to new states for the RENDERING

@@ -1,0 +1,12 @@
+
+
+
+
+
+
+	useEffect(
+		() => {
+			// fetch data from API
+		},
+		[conditionalRender1, conditionalRender2]
+	);

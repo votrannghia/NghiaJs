@@ -1,0 +1,20 @@
+
+className={this.getBootstrapClasses()}
+style={this.getStyles()}
+
+
+<Component> {this.getPremadeContent()} </Component>
+
+
+
+this.getBootstrapClasses() {
+    className = "init some classes";
+    return condition(props + state) ? className : className + "additional classes";
+}
+
+Style is similar to classes
+
+
+this.getPremadeContent(){
+    return comput, search, sort, filter, map, ... on (STATE + PROPS);
+}

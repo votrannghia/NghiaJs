@@ -1,0 +1,129 @@
+
+
+
+
+			REACT COMPONENT represent for a FEATURE
+
+				1. STATE:	Sync with database or 3rd parties
+					+ "Main" State   ====> Sync with datasources[internal database, 3rd parties]
+					+ Helper State
+					+ Error State (usually mapped with input controls)
+					===> All for REMEMBERING "state" of individual users by their individual actions.
+
+					* Sometime there is no need to use MAIN STATE(to sync with a datasource)
+						Ex: Remember user's actions/events: CRUD[clicked, hovering, active, typing, selection, copy, paste, delete, filtering, searching]
+					* Tips:
+						+ Think of using flag boolean to remember some useful information.
+							Ex: isHovering, isActive, isTyping, wasDeleted, clicked, disabled, isSelectingText, isDoubleClicked, isPausingVideo, isPressKey, isSubmitted
+						+ Sometimes: The State contain function for rendering (Ex: (movie) => { INFO about title, link, like icon, ...} )
+								===>( F(original info from db) => NEW INFO for displaying)
+
+				HELPER data:
+					Ex: Joi.Schema, static data, columns for movies table, ...
+				
+
+				2. VALIDATIONs
+					+ Define Schema with Business Rules (Specific for individual component/feature)
+					+ Define a function for catching the errors. => Record errors from user's interacting
+					+ handleSubmit, handleChange will use the above catching errors function
+
+				3. HANDLERs
+					1. Handle processing user's actions toward a feature such as submitting the form, input's changing
+					2. Handling events raised from the child UIs (controlled components)
+					
+					+ Use Validate functions
+					+ Use other Helper functions
+
+				4. Render parts of UI
+					+ PRE-MAKING the useful INFO, ready for the rendering functions (Ex: info1, info2, infoX, ...)
+					+ DESCRIBING What the UI that a child part(controlled component) should have; The UI that Whole of the Feature look like.
+					+ render() {
+						// Premade useful infos
+						// Make some decisions
+
+						// Render whole UI of feature by rendering each individual parts of UI
+						.renderX(info1, info2, info3);   -> controlled component X
+						.renderY(info1, infoX, infoY);
+						.renderZ();
+					}
+			
+				5. Binding data
+					+ Component's lifecycles: componentDidMount, shouldMount, ...
+
+				7. Something more, sometimes there are some exceptions. That's normal
+
+				* REMEMBER: The SINGLE Responsibility + Abstraction  || Viec ai nguoi ay lam
+					+ State : Hold and Sync with data sources
+					+ render: Only rendering the UI ------- BY -------- Premade-Information (conditional rendering)
+					+ Handlers: Catch the EVENTs, --> Updating state
+					+ Helper functions: Do a small task for supporting the handler
+					+ Validation: Validate inputs from users, ---> Update "Error" State
+
+
+
+
+
+
+
+===============================================================================================================================
+				ROLEs inside a FEATURE
+					1. Who's responsible for Storing DATA (Main data, Helper data, Static data, Error Info)
+					2. VALIDATOR towards INPUTs
+					3. HANDLERs for EVENTs
+					4. BINDING data with UI
+					5. CALLER of Backend services
+					6. RENDERer
+					7. HELPERs
+===============================================================================================================================					
+
+
+
+EXAMPLEs:
+
+	
+import React from "react";
+import Joi from "joi-browser";
+import Form from "./common/form";
+
+class LoginForm extends Form {
+  state = {
+    data: { username: "", password: "" },
+    errors: {}
+  };
+
+  schema = {
+    username: Joi.string()
+      .required()
+      .label("Username"),
+    password: Joi.string()
+      .required()
+      .label("Password")
+  };
+
+  doSubmit = () => {
+    // Call the server
+    console.log("Submitted");
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Login</h1>
+        <form onSubmit={this.handleSubmit}>
+          {this.renderInput("username", "Username")}
+          {this.renderInput("password", "Password", "password")}
+          {this.renderButton("Login")}
+        </form>
+      </div>
+    );
+  }
+}
+
+export default LoginForm;
+
+
+
+
+
+
+

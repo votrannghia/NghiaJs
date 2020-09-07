@@ -1,0 +1,38 @@
+
+Filtered ======= Sorted >>>>>>>>>>> Paginated
+
+Flow:
+    Step1: Filtered by conditions => output filteredResult
+    Step2: Sorted by conditions[ {criteria, order}, {criteria2, order}, ...]
+    Step3: Paginated => get apart from Sorted.
+
+    => PROBLEM: Each time reload, we must flow these step through step1 and step2
+
+
+PAGINATION:
+            const paginated = paginate(allMovies, pageSize, pageNumber);
+            => Change pageNumber => Change sub-set data
+            
+
+
+
+    1. Filtered
+    2. Sort
+    3. Pagination
+
+
+    filtered = filter(
+                        original data set,
+                        criterial for filtering
+                    );
+
+    sorted = sort(
+                    filtered
+                    criterial for sorting
+                );
+    
+    pagination = paginate(
+                            filtered + sorted data,
+                            pageSize,
+                            totalItems
+                        );

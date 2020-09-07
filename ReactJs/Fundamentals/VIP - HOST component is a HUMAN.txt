@@ -1,0 +1,25 @@
+
+
+
+
+
+	HOST component = BRAIN + BODY
+
+
+
+	I. BRAIN = { REMEMBER + BEHAVIORS}
+		+ REMEMBER info at STATE = [PERSISTENCE info + HELPER info]
+		+ BEHAVIORS = [handleDelete, handleCreate, handleLike, hanldeUpdate, handleSort, handleFilter, ...]
+		
+		Problem:
+			Identify WHICH info is PERSISTENCE info (sync to database)
+					 WHICH info is HELPER info (just store in memory supporting for interact with users)
+			HOW: CONSIDER which infos need to be remember over across users behaviors, actions.
+
+
+	II. BODY = {RESENTATIONAL components = CONTROLLED components}
+		+ When users touch the body, the body RAISED that EVENT to the BRAIN
+
+
+
+

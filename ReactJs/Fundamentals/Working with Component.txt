@@ -1,0 +1,24 @@
+RENDERING DYNAMIC CONTENT: {CONTENT}
+
+	CONTENT(info/data) comes from:
+
+	1. State from [database, 3rd party API]
+	2. Props from [database, 3rd party API]
+	3. Generated internal by Component itself
+	4. With supporting of Function
+		+ Format content
+		+ Compute content
+		+ Markup content
+		+ Filter, Sort, Paging
+
+	FLOWS:
+	1. EVENT => CHANGE STATE
+	2. CHANGE STATE => COMPONENT RE-RENDER
+
+=>	Developer's work:
+	0. INIT for the first rendering
+	1. Handle before render, after render
+	2. Setup preparing for the next rendering
+	3. Managing:
+		+ Changing of STATES, PROPS
+		+ Co-operate CONTENT between COMPONENT

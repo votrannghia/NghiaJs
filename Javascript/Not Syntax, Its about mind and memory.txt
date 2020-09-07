@@ -1,0 +1,16 @@
+Learn current syntax. While interviewing for jobs, you’ll often need to write code. Code like this won’t help you:
+
+function add (a) {
+  return function (b) {
+    return a + b;
+  };
+};
+
+When you could have written this, instead:
+
+const add = a => b => a + b;
+
+
+TRY TO MODEL THE PROBLEM in REAL WORLD
+then
+	SOLVE it as it happens in REAL WORLD

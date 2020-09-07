@@ -1,0 +1,9 @@
+
+                    Step 1: Consider What will be repeated if we reuse this module.
+                    Step 2: Consider What should be Abstraction to avoid to much DETAILED
+                    Step 3: Encapsulate What vary change into 1 Component
+                            Then, Define a General INTERFACE
+                                + Inputs: infos used to RENDERING, create React Element
+                                + Outputs:
+                                    + React Element
+                                    + Events will be raised to the HIGH

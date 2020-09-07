@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+				1. Keep the INTERFACE the same
+				2. Change the implementation
+					Ex: httpService, genresService, moviesService
+						Replace fakeMovieServices, fakeGenreService with the "real"
+				

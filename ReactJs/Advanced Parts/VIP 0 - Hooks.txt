@@ -1,0 +1,40 @@
+
+
+
+	Usecase for using useEffect
+	
+	1. Side Effect 1:
+		componentDidMount() {
+			document.title = `You clicked ${this.state.count} times`;
+		}
+		
+		componentDidUpdate() {
+			document.title = `You clicked ${this.state.count} times`;
+		}
+		
+		
+		=> The duplicated code goes into 2 place.
+		
+	2. Side Effect 2:
+		componentDidMount() {
+			this.interval = setInterval(this.tick, 1000);
+		}
+		
+		componentWillUnmount() {
+			clearInterval(this.interval);
+		}
+		
+	3. Side Effect 3 
+		( URELATED	 Various Responsibility Part of Code)
+		componentDidMount() {
+			document.title = `..`;
+			this.interval = setInterval(this.tick, 1000);
+		}
+		
+		componentDidUpdate() {
+			document.title = `..`;
+		}
+		
+		componentWillUnmount() {
+			clearInterval(this.interval);
+		}

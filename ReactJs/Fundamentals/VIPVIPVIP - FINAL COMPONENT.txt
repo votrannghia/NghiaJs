@@ -1,0 +1,27 @@
+
+================================= Master of ABSTRACTION ==============================
+
+                DESIGN COMPONENT WITH BOTTOM-UP APPROACH
+
+        S1. BREAK THE WHOLE UI into PIECEs
+        S2. START FROM THE LOWEST PIECE of UI
+        S3. EACH UI PIECE, we define:
+            * INTERFACE component.
+                INPUTs:
+                        1. Event Handler References
+                            Eg: onSort, onLike, onDelete, onPageChange...
+                        2. Pure Data (MAIN data for rendering + HELPER data): list, array of data
+                        3. JSX (children React element)
+                        4. Wrapper (Eg: textProperty(name); idProperty(_id))
+                OUTPUT:
+                        React Element (from render() method)
+            
+            * ADDITIONAL Process before RAISING Events Up the HIGH
+                Eg: At LOW, we have:
+                    handleBeforeRaiseEventToTheHIGH = item => {
+                        // DO something more before RAISING the EVENT to the HIGH
+                        this.props.onSort(item);  ====> Delegate handling events to the HIGH component
+                    }
+
+            * STATE = {MAIN State = Persistence Data}   u   {HELPER State = for supporting computing, interact}
+================================= Master of ABSTRACTION ==============================

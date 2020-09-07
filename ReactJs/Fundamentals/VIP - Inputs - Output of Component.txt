@@ -1,0 +1,14 @@
+
+
+
+    I. INPUTs
+        PROPS (dataX, dataY, dataZ,....) + internal State (Optional)
+            to perform "DESCRIBING" the UI.
+        PROPS might be:
+            + data...
+            + children React Element attached
+            + handlers' address
+
+    II. OUTPUTs
+        1. EVENT, raised to OTHER COMPONENT to handle (PARENT or HIGH Components)
+        2. React Element

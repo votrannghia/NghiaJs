@@ -1,0 +1,13 @@
+
+
+
+
+
+
+	For smooth app, our code should:
+		1. Clone the current orginal data
+		2. Edit this data
+		3. setState for updating the UI
+		4. Calling backend service for actually EDIT the data at database
+		5. Reverse if any errors
+		

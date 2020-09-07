@@ -1,0 +1,12 @@
+
+
+
+
+
+										MASTER OF ABSTRACTION
+										
+										
+										
+										At THE MAIN METHOD
+											SHOULD Think of ABSTRACTION for each PARA of CODE
+												=> Make it a HELPER method.

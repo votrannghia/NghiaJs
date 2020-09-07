@@ -1,0 +1,66 @@
+	TOPICS NEED TO BE CLEAR TO BECOME MASTER OF CREATING REACTJS APPS
+
+---------------------------------------------------------
+0. Be Skillful at using React KEY Concepts, Principles as TOOLs via the following slices:
+	+ AWARE of this concept resolve WHAT PROBLEM? (WHY it is BORN)
+	+ Distinguish between concepts with "similar" meaning
+	+ Benefits of using this new concept
+	+ Best way to implement this concept in practice
+	+ AWARE of WHEN/WHERE to use WHICH
+	+ AWARE of RESPONSIBILITY of an OBJECT(concept)
+	+ AWARE of PROS and CONS of each tool.
+	+ AWARE of HOW to use it MOST WISELY
+	+ Understand USE-CASES of each concept
+	+ Co-operate between this tools together
+
+
+---------------------------------------------------------	
+1. How ReactJS work Under The Hood.
+
+2. Think in ReactJs
+
+
+---------------------------------------------------------
+3. ReactJS Design Patterns - SOLID - DI - IoC
+
+4. Architecture of A ReactJS Application
+	+ Clean Architecture vs Bad Architecture
+	+ PRINCIPLEs of designing
+
+
+---------------------------------------------------------
+5. Lessons Learned
+	+ Clean Code vs Bad-Smells Code
+	+ Tips and Tricks
+
+
+---------------------------------------------------------
+6. Master of Creating Common Features of ReactJs App.
+
+
+---------------------------------------------------------
+7. Tunning Peformance of an ReactJS Application
+
+
+---------------------------------------------------------
+8. Q&A
+
+
+
+
+---------------------------------------------------------
+---------------------------------------------------------
+	HOW to CREATE everything - HIGHEST ABSTRACTION
+---------------------------------------------------------
+---------------------------------------------------------
+	1. Identify the CORE problem IT solve
+	2A. Decompose PROBLEM into sub-problems
+	2B. Decompose SYSTEM into sub-parts by each part's RESPONSIBILITY
+	3. For each sub-problems/sub-parts
+		+ Try to find out this part/problem is composed by what FACTORS?
+		+ IF there is problem generated from process of build system.
+		=> Continue, identify what FACTORS need to be created to solve problem.
+	Moi thu do duyen ma co! => Hay xac dinh cac duyen nay la gi?
+		
+		
+		

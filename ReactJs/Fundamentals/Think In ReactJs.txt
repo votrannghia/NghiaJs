@@ -1,0 +1,125 @@
+	THINK IN REACT
+	
+	
+	
+	Step 1: Break The UI into A Component Hierarchy
+	
+		How do we know WHAT should be its own component?
+			=> Use the technique: SRP - SINGLE Responsibility Principle
+					=> The component should idealy only do ONE thing.
+						If it ends up growing, it should be decomposed into smaller subcomponents.
+	
+		UI and data models tend to adhere to the same information architecture.
+			=> Each component matches one piece of your data model.
+		
+		Result:
+			1. FilterableProductTable
+					=> contains the entirely of the example
+			2. SearchBar
+					=> receives all user input
+			3. ProductTable
+					=> displays and filters the data collection based on user input
+			4. ProductCategoryRow
+					=> display a heading for each categroy
+			5. ProductRow
+					=> display a row for each product
+
+
+			Arguments:
+				The TableHeader contains NAME and PRICE labels.
+				1. We leave it a part of the ProductTable
+				2. We make it own ProductTableHeader if the Headers grows to be complex
+					Ex: User make some click on each heading for sorting
+
+			Arrange components into a hierarchy:
+				FilterableProductTable
+					+ SearchBar
+					+ ProductTable
+						+ ProductCategoryRow
+						+ ProductRow
+			
+			
+			const ProductCategoryRow = props => {
+				// Prepare content
+				const { category } = this.props;
+				// Describing What the UI should look like
+				return (
+					<tr>
+						<th colspan="2">{category}</th>
+					</tr>
+				);
+			}
+			
+			const ProductRow = props => {
+				// Prepare content
+				const { product } = props;
+				
+				const name = product.stocked ? 
+							 product.name : 
+							 <span style={{color: 'red'}}>{product.name}</span>;
+				// Describing What the UI should look like
+				return (
+					<tr>
+						<td>{name}</td>
+						<td>{product.price}</td>
+					</tr>
+				);
+			}
+			
+			
+			const ProducTable = props => {
+				// Prepare content
+				const { products } = props;
+				
+				
+				const rows = null; // row: ProductCategoryRow + ProductRow
+				// Describing WHAT the UI should look like
+				return (
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{rows}
+						</tbody>
+					</table>
+				);
+			}
+			
+			
+			const SearchBar = props => {
+				// Prepare content
+				const {checked, searchHint, message} = props;
+				
+				// Describing the content
+				return (
+					<form>
+						<input type="text" placeholder="{searchHint}">
+						<p>
+							<input type="checkbox" />
+							{' '}Only show products in stock
+						</p>
+					</form>
+				);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

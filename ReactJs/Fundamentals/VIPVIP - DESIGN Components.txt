@@ -1,0 +1,88 @@
+	ALL ABOUT DESIGNING SYSMTEM WITH COMPONENTS
+
+	INTERFACE of COMPONENT
+		1. INPUTs - used for rendering UI
+			+ Main State from database
+			+ Helper State
+		
+		2. EVENTs for interact with users
+		   & Handler addresses for these EVENTs.
+
+		3. OUTPUTs:
+			+ EVENTs raised to the HIGH
+			+ React Element which created for rendering UI
+		
+		Tips: 
+				+ Think of 2 kind of components: 
+								HOST(CONTAINER) Component (HIGH)      -----         REPRESENTATIONAL Component (LOW)
+									(Class Component)									(Functional Component)
+									(Stateful Component)								(Stateless Component)
+
+			 	+ Try to use the component before implement it, to see it need what INPUTs, OUTPUTs
+
+				+ Ask myselft, this LOW component need WHAT to render the UI. or the UI of LOW depends on WHAT information. => INPUTs
+				+ Handling the EVENTs is taken by WHICH component (HIGH or LOW)
+
+		THE LOW COMPONENTs should be DECOUPLED from the HIGH.
+
+
+
+
+
+		VARIOUS point of views:
+			HIGH component = HOST = BACKEND = CONTAINER ====> interface with Redux
+				=> Manage the STATE, making things work
+			LOW component = CONTROLLED = PRESENTATIONAL = CHILD ====> concerned with the LOOK
+
+
+
+
+
+
+
+	GOALS:
+		+ FLEXIBLE
+		+ MAINTAINABLE
+		+ SCALABLE
+		+ SPEED + PERFORMANCE
+		+ TRONG 1 CUC COMPONENTS, LAM SAO MA KHI STATE THAY DOI, TA IT PHAI RENDER CAC React Element.
+
+
+	COMPONET is a PIECE of UI, include:
+		+ CONTENT = DATA = INFORMATION
+		+ JSX tag
+		+ STYLE for this UI
+
+
+	RELATIONSHIPS BETWEEN COMPONENTS	
+		1. INHERITANCE
+		2. COMPOSITION
+		6. IS-A vs HAS-A
+		4. AGGREGATION
+
+
+		CONSUMER/CLIENT   ----------------------------------------------- PROVIDER/SERVER
+		3. DEPENDENCY
+		5. DELEGATION
+
+		COMPONENT should be built from from TOP --------> DOWN, from PARENT ------> CHILDs.
+		(From Result -----> COMPOSING conditions, factors, elements)
+
+
+	HOW setState work
+
+
+	SOURCES of DATA: 
+		List, Array, Set, Map, LinkedList, Stack, Queue, Tree, Graph, HashTable, TreeTable (ORDERED)
+
+	
+	COMMON UIs:
+		+ "Text": hx, label, span, p
+		+ Form
+		+ Table
+		+ ListBox
+		+ GridBox
+		+ FlexBox
+		+ Action UIs: [Button, CheckBox, RadioButton, TextBox, ...]
+
+	A Component should DO THE ONE THING

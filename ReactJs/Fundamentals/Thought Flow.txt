@@ -1,0 +1,25 @@
+App.js + App.css
+------------------
+
+	// JS file
+	// HTML file
+	// CSS file
+
+	// 1. JS Engine use HTML and CSS to create DOM
+	// 2. JS Engine use JS file to impact on DOM
+	// 3. JS Engine finally does rendering on Browser's screen
+
+	// HOW UNDER THE HOOD?
+	// React Component (React Class || Function) => React Element {JS, HTML, state(information)} == JSX Element == A plain Javascript Object
+	// JSX = (HTML mixedto JS)
+
+	// Babel = modern JS compiler.
+	// Babel convert JSX element ====into===> plain JS code that browsers can understand
+
+	// JS Engine do decomposing this JSX into PIECE of (JS + HTML + CSS with state)
+	// JS Engine rendering on Browser's screen.
+
+ENTRY POINT for our ReactApp - index.js
+---------------------------------------
+	// JS Engine look for this file first
+	// JS Engine interpret and then run it

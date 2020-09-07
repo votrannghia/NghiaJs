@@ -1,0 +1,32 @@
+
+    setState({someDesctructingHere}) is only called when the component is rendered.
+
+    constructor
+        1. Called once when the instanace of componet is created.
+        2. The best place to initiallize some properties in the class component
+
+    1. NOT ALLOWED use this.props inside a PURE constructor like this:
+        constructor() {
+            super(props); // undefined this.props
+            this.state = this.props.something; // undefine this.props
+        }
+    
+    RESOLVE:
+        constructor(props) {
+            // NOW
+            // calling props here is OKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+        }
+
+    2. NOT ALLOWED to call this.setState() inside the constructor() like this:
+        constructor() {
+            super();
+
+            this.setState({aDesctructedDataContainer});
+        }
+
+    RESOLVE:
+        constructor() {
+            this.state = this.props.something;
+        }
+    
+

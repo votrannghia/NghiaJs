@@ -1,0 +1,34 @@
+
+
+
+
+
+
+				IDENTIFY
+				
+					1. Which PART is COMMON and able to REUSE across components
+						+ Ex: Validation, Log
+
+					2. Which PART is INDIVIDUAL for a SPECIFIC component.
+						+ Ex: Some individual state(hard state, static state) for each specific component.
+
+
+
+					Techniques to archieve the goal:
+						1. Delegate + Abstraction + Inheritance
+						2. Interface
+						3. Composition
+						4. performAnAction() {
+							doBefore();
+							doTheMain();  ---> Delegate to sub components.
+							doAfter();
+						}
+						
+						5. Destructuring
+					
+						(6). In a "BLOCK" of code.
+							Each LINE should have the same abstraction level.
+
+
+
+					Trade off - No solution is absolutely perfect.

@@ -1,0 +1,8 @@
+	WHAT INSIDE AN REACTJS APPLICATION
+
+
+	I. COMPONENTs:
+	II. Utils
+		1. Pagination, Filtering, Sorting, Searching
+		2. Helpers
+		

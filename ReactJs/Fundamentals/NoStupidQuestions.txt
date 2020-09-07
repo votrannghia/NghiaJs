@@ -1,0 +1,6 @@
+ONLY QUESTIONS, NOTHING MORE
+
+- Component de lam gi?
+
+- render() method de lam gi?
+

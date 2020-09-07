@@ -1,0 +1,14 @@
+
+        I NEED TO BE AWARE OF the CURRENT STATUS of each individual user.
+                By keep track of its information of the current transaction.
+
+        Examples:
+        NEED TO KEEP TRACK OF THESE INFORMATION on MEMORY
+                1. CURRENT PAGE =?
+                2. CURRENT FILTER =?
+                3. CURRENT SORT =?
+                4. 
+
+        Usually, We do not keep these information at database, but also local storage on the app at Client Side
+
+        

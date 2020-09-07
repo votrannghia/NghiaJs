@@ -1,0 +1,94 @@
+
+	ROUTING
+		1. LINKs <LinksContainer />
+			<nav>
+				<ul>
+					<li>
+						<Link to="/pathX">To X</Link>
+					</li>
+					<li>
+						<Link to="/pathY">To Y</Link>
+					</li>
+				</ul>
+			<nav>
+		2. ROUTERs <RoutersContainer />
+			<parent>
+				<Switch>
+					<Route path="/pathX" component={ComponentX} />
+					<Route 
+						path="/pathY"
+						render={(props) => </ComponentY additionalProp1={value} additionalProp2={value} {...props} />}
+						/>
+				</Switch>
+			</parent>
+		3. TargetComponents
+			+ ComponentX
+			+ ComponentY
+
+
+
+
+
+	PUSH vs REPLACE
+	
+		this.props.history.push("/login"); vs 
+		this.props.history.replace("/login"); ===> USE this
+	
+
+
+	<Route
+			+ path 
+			+ component = {Target}
+			+ render={ () => {}}     => pass more additional props to the COMPONENT beside the standards (history, location, match)
+
+
+
+	Provide a method let users move from one place to another place on the internet.
+	
+	1. Something could point direction to someplace.
+		Ex: A label with a hyper-link.
+		<Link to={path} >
+			Posts    // ----> Label
+		</Link>
+		
+		LINK = label + path.
+		
+		==============> THIS technique for showing directions to users
+
+	2. Router
+		is a mapping PATH and DESTINATION {could be an area, an sub-area, a specific dest}
+		Ex:
+			<Switch>
+				<Route path="/products/:id" component={ProductDetails} />     ----------------> Dynamic path due to id. Retrieve by this.props.match.params.id
+				<Route path="/products" component={Products} />
+				<Route 
+					path="/posts" 
+					render={(props) => <Posts sortBy="newest" {...props} />} 
+				/>
+			<Switch>
+		===============> Any URL "match" these path will lead app to a new place(component == internet resource).
+
+		DESTINATION:
+			+ An Area
+			+ A Sub-Area
+			+ A Specific one. Ex: products/1
+	
+	
+	3. PROPS
+		* Standard Props passed into the DESTINATION component
+			+ history
+			+ location
+				.search: "?sortBy=newest&approved=true" ----------> a query string - append into the URL
+			+ match
+				.params
+
+		* Customized additional props, added into the DESTINATION component at run-time
+	
+	4. Redirect
+		FROM 
+			+ old Path (need to setup): <Redirect from="oldPath" to="newPath" />
+			+ invalid path (default)
+		TO: Default path
+		
+		
+		******* REMEMBER: Need to Route the newPath with a component, or the default component for invalid URL.

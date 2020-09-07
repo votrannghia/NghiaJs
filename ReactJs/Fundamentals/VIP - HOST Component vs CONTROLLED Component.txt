@@ -1,0 +1,22 @@
+
+
+			0. STATE of a "GROUP" UIs related together should
+				+ Concentration at 1 place - might be at the HIGHEST module
+				+ How to manage these state
+
+
+			1. HOST Component 
+				+ At HIGH(Parent)
+				+ Hold all States
+				+ Define handlers for event raised from CONTROLLED Component
+			
+			2. CONTROLLED Component at LOW module
+				+ At LOW (Child)
+				+ NO NEED to hold
+				+ Define event on each UI Controlls
+				+ Let The HOST Component know there is event
+				+ Receive INPUTS passed from the HOST via props
+				+ props
+					1. Data
+					2. Child React element
+					3. Handlers's addresses

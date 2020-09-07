@@ -1,0 +1,9 @@
+	RESPONSIBILITIES OF VIRTUAL DOM
+
+	The ONE who sit in the MIDDLE between our React App and DOM
+	
+	[React App] ================ Virtual DOM ------------------------------------> DOM
+	
+	Virtual DOM tell the DOM [what Elements] NEED to be UPDATED
+	
+	

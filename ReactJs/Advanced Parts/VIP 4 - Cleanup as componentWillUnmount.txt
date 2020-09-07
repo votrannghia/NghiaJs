@@ -1,0 +1,21 @@
+
+
+
+
+useEffect(
+	() => {
+		// Fetching data from API
+
+
+
+		-------------------------
+		return () => {
+			// CLEANING UP
+				// cancelling subscription
+				// timers
+				// removing event handlers
+		}
+		-------------------------
+	},
+	[]   ===> This above function is called just once!!
+);

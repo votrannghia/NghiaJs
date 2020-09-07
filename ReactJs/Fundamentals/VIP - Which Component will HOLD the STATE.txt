@@ -1,0 +1,16 @@
+
+
+
+
+		PROBLEM:	There are some components, one is HIGH, some are LOW
+					So, Which will hold the state?
+						LOW should hold the state?
+						
+		SOLVE:
+					There are 2 cases:
+					
+					1. If these 3 components belong to a "group"
+					=>	The HIGH should host the STATE for data synced!!!
+					
+					2. If there is a LOW need some private calculation
+					=> It should host some own private state.

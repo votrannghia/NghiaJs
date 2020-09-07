@@ -1,0 +1,21 @@
+
+    HIGH LEVEL PROBLEM:
+        WHERE WE WILL DO PAGINATING DATA?
+            1. Server side
+            2. Client side
+
+
+    "DO PAGINATION, FILTER, SORTING, SEARCHING before RENDERING"
+
+
+    1. Strategies:
+
+    2. Problem:
+        Client keep all the orignal data ?
+    OR 
+        Client request to get the useful(paginated data) from Server
+        The paginating is delegated to Server.
+    
+CLEAN CODE:
+    1. SHOULD keep the paginating feature REUSABLE across different features, different applications
+    2. Keep the render() of movie clean, not be blow out

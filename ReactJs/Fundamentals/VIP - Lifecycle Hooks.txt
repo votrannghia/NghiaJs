@@ -1,0 +1,50 @@
+I. MOUNTING PHASE
+
+    0. constructor()
+        1. Called once when the instanace of componet is created.
+        2. The best place to initiallize some properties in the class component
+        3. No call this.setState here ====> this.state = something // OK
+
+    1. render() -> generate very NEWEST Virtual DOM ( called React Element - essentially a plain Javascript Object)
+
+    (*) -> Virtual DOM RENDERED to the DOM.
+
+    2. componentDidMount()
+        1. Called after the component is RENDERED INTO the DOM
+        2. The PERFECT place to make a AJAX call to fetch data from server
+            componentDidMount() {
+                // AJAX call to get latest data
+                this.setState({new data })
+                // Do something afeter
+            }
+
+    componentDidUpdate(prevProps, prevState) {
+
+    }
+
+
+II. UPDATING PHASE
+
+    0. Somewhere in Component call setState( {} ), 
+                              Which SCHEDULEs a call to render() method in future. (EVENT LOOP)
+
+    (*) React might make a copy of the current Virtual DOM. (it will be called OLD_Virtual_DOM at step 2)
+
+    1. render() -> generate a NEW virtual DOM.
+
+    2. React compare NEW virtual DOM with OLD virtual DOM. => to figure out What has changed.
+        CHANGE = React.compare(OLD_Virtual_DOM, NEW_Virtual_DOM);
+    
+    3. React base on the CHANGE to update it into the DOM.
+        React.doUpdate(CHANGE, the DOM);
+
+    4. componentDidUpdate(prevProps, prevState){
+        // The best place to do some AJAX call to get data from server like:
+        if (needToFetchNewestDataFromServer(prevProps, prevState)) {
+            make a AJAX call here.
+        }
+
+            
+    }
+
+III. UNMOUNTING PHASE

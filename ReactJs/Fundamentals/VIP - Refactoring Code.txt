@@ -1,0 +1,27 @@
+
+
+
+    Ex: Tables of movies
+        Each times user change Filter, Sorter, Pagination
+        => The collection is changed:
+            + about Order
+            + about Elements
+        => The table need this collection
+        
+        => The table need to give the sorter to the CONTAINER component. (After users make an impact on the UI - EVENT)
+            => The CONTAINER component then will reset the state => lead to re-render the table.
+
+
+
+        REPONSIBILITIES:
+            + PRESENTATION component is to give some information to the CONTAINER one in order that It can update the STATE
+                Eg: Table give the sorter{criteria, order} to the CONTAINER
+            + CONTAINER component is to change the STATE reply on the useful information from the PRESENTATIONAL
+
+
+        THE STORY:
+            S1. Our HAND touch the fire, the HAND feel hot. the HAND give this feeling to our BRAIN.
+            S2: Our BRAIN due to this feeling, It change the POSITION of the HAND.
+            S3: The HAND use the updated POSITION to RE-RENDER itself (GET AWAY from the FIRE)
+            // DONE
+        

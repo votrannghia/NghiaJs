@@ -1,0 +1,11 @@
+
+
+	1. Should WRAP the 3rd API into a MODULE (1 PLACE)
+		Ex: httpServices.{get, update, delete, post}
+		=> We could replace/interchange this API by another one without affecting the codes using it.
+		=> Swap APIs at run-time due to different conditions
+		=> Decrease the dependency on a specific API.
+		=> 1 PLACE ---> change at one place, affect to other palces used
+
+	2. Based on Encapsulation, Abstraction, Interface, Delegate, Composition
+		=> Achieve the goals: Flexible, Maintainable if any changes in the future.

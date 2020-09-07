@@ -1,0 +1,62 @@
+	LIST OF COMMON METHODS INSIDE A REACT COMPONENT INCLUDE (STATELESS AND STATEFUL)
+
+
+	I. THE MAIN ACTION:
+		1. render(){}   ---> Responsible for generating React Element.
+			+ Output: 
+				1. React Element (JSX element is essentially a plain Javascript object)
+				2. EVENTs raised to the HIGH component.
+			+ Inputs: 
+				PRE-MADE [state, prop, helper state == data selft generated...]
+
+		2. Handlers
+			+ For handling the INTERNAL EVENTs of component itself
+			+ For handling the EVENTs raised from the LOW components ( the CHILD components)
+				=> pass these handlers's ADDRESSES to the LOW component via PROPS
+
+	II. THE HELPER METHODs
+		1. Init Content - Information - Data
+			constructor(){} ---> Responsible for initing something for the FIRST rendering.
+			+ Inputs: state, props, helper state
+			+ Outputs: PREPARED content for the first rendering.
+
+		2. Calling API to get latest data [internal database, 3rd parties]
+
+		3. Some algorithm helper methods
+
+		4. MAKE-UP content
+			+ Output: JSX || PURE content?
+
+		5. EVENT Handlers - (with arguments)
+
+		6. Do some compute-calculate on the data.
+
+		7. Search, Filter, Sort, Paging, Group content
+
+		8. Create new, Update existing, Delete existing content.
+
+		9. Managing state, props changes
+			Do something MORE when state and props changes. MOT CACH CHU DONG.
+
+		10. Lifecycle Methods Hook t[BORN ; LIVING-GROWING ; DEAD]
+
+		11. On receive the new STATEs
+
+		12. On receive the new PROPs from the parent component
+
+		13. Dynamically classes for styling
+
+		14. Dynamically premade content
+
+			13 + 14 due to STATE + PROPS
+
+	III. REMEMBER
+		HOW React handling render a LIST, ARRAY, inside Table, Grid, Flex
+
+		Everytime an Event-Handler is invoked. There are 2 cases:
+			1. Do rendering ----> setState() -> re-render the UI
+			2. Just react to users on UI
+
+		Understand callback - promise - async/await, event-loop
+
+		
